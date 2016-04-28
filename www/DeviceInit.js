@@ -81,7 +81,7 @@ function DeviceInitializator() {
 
       // se lo script cordova.js e' incluso
       if (typeof Connection !== 'undefined') {
-        if (navigator.connection.type == Connection.NONE)
+        if (navigator.connection.type == Connection.NONE || navigator.connection.type == Connection.UNKNOWN)
           location.href = "no_connection.html";
       }
 
